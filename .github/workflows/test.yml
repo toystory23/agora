@@ -23,7 +23,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_EC2_METADATA_DISABLED: true
         run: |
-          aws s3 sync ./my-agora-states-client-react/build s3://fe-106-toystory23-s3 \
+          aws s3 sync build s3://fe-106-toystory23-s3 \
             --region ap-northeast-2 \
             --delete
         working-directory: ./my-agora-states-client-react
